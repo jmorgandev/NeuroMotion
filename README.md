@@ -13,11 +13,11 @@ In the context of NeuroEvolution, the selection, crossover, and mutation methods
 
 To use the library, attach the "ExperimentDirector.cs" script to an empty root-level gameobject and assign the "Subject Template" inspector variable with a prefab containing your subject.
 
-To create a subject, create a MonoBehaviour that inherits from the Subject base class (```NeuroMotion.Subject```) and override the ```UpdateFitness``` function with a fitness evaluation function of your choosing (Which can be absolute or accumulative).
+To create a subject, create a MonoBehaviour that inherits from the Subject base class ```NeuroMotion.Subject``` and override the ```UpdateFitness``` function with a fitness evaluation function of your choosing (Which can be absolute or accumulative).
 
 ```csharp
 public override void UpdateFitness() {
-    fitness += Time.deltaTime;
+	fitness += Time.deltaTime;
 }
 ```
 
@@ -41,10 +41,10 @@ if (transform.position.x < 5.0f) {
 Finally set the appropriate values in the Experiment Director. Higher population numbers can potentially converge on a solution quicker (Using roulette selection for higher numbers typically works well). The neuron topology string **must only consist of numbers to define the structure**. The activation topology **must always be one character less than the neuron topology**, since no activation function is assigned to the input layer.
 
 The choice of activation functions are:
--'s' : Sigmoid
--'t' : Tanh
--'r' : ReLU
--'l' : Linear
+- 's' : Sigmoid
+- 't' : Tanh
+- 'r' : ReLU
+- 'l' : Linear
 
 If you do everything right, you should have your own agent with it's own sensors, outputs, and fitness function ready to attempt to evolve an optimal solution using NeuroEvolution.
 
