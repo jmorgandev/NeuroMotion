@@ -17,7 +17,7 @@ To create a subject, create a MonoBehaviour that inherits from the Subject base 
 
 ```csharp
 public override void UpdateFitness() {
-	fitness += Time.deltaTime;
+    fitness += Time.deltaTime;
 }
 ```
 
@@ -34,7 +34,7 @@ You must also define a **failure** condition for your agent. It's probably a goo
 
 ```csharp
 if (transform.position.x < 5.0f) {
-	DisableSubject();
+    DisableSubject();
 }
 ```
 
